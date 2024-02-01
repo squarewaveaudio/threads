@@ -1,26 +1,16 @@
 class FFTContainer {
-  // head of list
   FFTLine head = null;
-
-  // next
   FFTLine next = null;
   
   int max_size = 0;
 
-  // constructor
-  FFTContainer(int max_size_)
-  {
-    head = new FFTLine(points_per_line);
+  FFTContainer(int max_size_) {
+    head = new FFTLine(32); // Default to 32 points per line
     max_size = max_size_;
   }
 
-  void add(FFTLine line)
-  {
-    // we always add onto the head.
-    // so set the current head, to the 'next' of this new one,
+  void add(FFTLine line) {
     line.next = head;
-
-    // and set the new one as the new head.
     head = line;
   }
 
