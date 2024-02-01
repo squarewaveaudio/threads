@@ -40,7 +40,7 @@ void setup_audio() {
 void draw() {
   translate(0, 0, -300); 
   background(79, 26, 35);
-  strokeWeight(10); 
+  strokeWeight(4); 
   strokeCap(ROUND);
   noFill();
 
